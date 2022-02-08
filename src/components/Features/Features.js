@@ -1,5 +1,4 @@
 import React from 'react';
-import { css } from 'styled-components/macro';
 import {
    FeaturesSection,
    FeaturesContainer,
@@ -25,9 +24,7 @@ const Features = () => {
                   return (
                      <FeaturesItem key={index}>
                         <FeaturesLink
-                           css={`
-                              background-image: url(${feature.image});
-                           `}
+                           style={{ backgroundImage: `url(${feature.image})` }}
                         >
                            <FeaturesText>
                               <h4>{feature.title}</h4>
