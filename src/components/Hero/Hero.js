@@ -55,9 +55,9 @@ const Hero = ({ slides }) => {
    return (
       <HeroSection>
          <HeroContainer>
-            {slides.map((slide, index) => {
-               if (currIndex === index) {
-                  return (
+            {slides.map(
+               (slide, index) =>
+                  currIndex === index && (
                      <HeroSlide key={index}>
                         <HeroSlider>
                            <HeroImage src={slide.image} />
@@ -82,9 +82,8 @@ const Hero = ({ slides }) => {
                            </HeroContent>
                         </HeroSlider>
                      </HeroSlide>
-                  );
-               }
-            })}
+                  )
+            )}
             <HeroSliderButton>
                <SliderButton onClick={prevSlide} primary="true">
                   <ArrowLeft />
